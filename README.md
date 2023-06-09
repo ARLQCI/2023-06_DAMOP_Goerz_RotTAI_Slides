@@ -16,4 +16,5 @@ Run `make` in a checkout of this repository
 
 * Latex
 * Python 3
-* ffmpeg
+* `ffmpeg`
+* ImageMagick (`convert` command)

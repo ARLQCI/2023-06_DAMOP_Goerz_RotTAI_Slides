@@ -48,7 +48,8 @@ TEX = r"""
     \node[inner sep = 0pt, anchor = south] at (0,0) {%
       \includegraphics[width=1.3cm]{trapped_atom_A}
     };
-    \node at (-8pt, 1.8cm) {\color{DarkRed}$V_{+}$};
+    \node[fill = white, inner sep=0pt, rounded corners, fill opacity = 0.9]
+    at (-8pt, 1.8cm) {\color{DarkRed}$V_{+}$};
   }
 }
 \tikzset{
@@ -87,8 +88,6 @@ TEX = r"""
 
 \end{document}
 """
-
-TEXMF = []
 
 
 def texcode(t, phi):  # t in ms, phi in π
@@ -147,7 +146,6 @@ def main():
     (outdir / "2").mkdir(parents=True, exist_ok=True)
     (outdir / "3").mkdir(parents=True, exist_ok=True)
     rootdir = outdir.parent
-    TEXMF.append(str(rootdir))
     datadir = rootdir / "adiabatic_dynamics_50πps"
     lab_data = read_csv(datadir / "dynamics_adiabatic_lab.csv")
 
